@@ -5,7 +5,7 @@ help:
 	@echo ""
 	@echo "..."
 
-TAG = $(shell git describe --tags --always --dirty=.dirty | \
+TAG := $(shell git describe --tags --always --dirty=.dirty | \
 	sed 's/v\(.*\)/\1/' | \
 	sed 's/\([0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\)-\([0-9][0-9]*\)-\(g.*\)/\1.dev\2+\3/')
 
